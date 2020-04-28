@@ -1,5 +1,7 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { SignalrService } from '../services/signalr-service';
+import { RouterExtensions } from "nativescript-angular/router";
+
 import { confirm } from "tns-core-modules/ui/dialogs";
 import {
   getBoolean,
@@ -20,7 +22,7 @@ import { IMessage, DeviceType } from '../models/message';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor(private signalrService: SignalrService, private _ngZone: NgZone) { }
+  constructor(private signalrService: SignalrService, private _ngZone: NgZone, private routerExtensions: RouterExtensions) { }
   token: string;
   userName: string;
 
@@ -46,6 +48,9 @@ export class LandingPageComponent implements OnInit {
       this._ngZone.run(() => {
         this.connectionStatus = status;
       });
+      if (status === false) {
+        this.routerExtensions.navigate(["/login"], { clearHistory: true });
+      }
     });
   }
 

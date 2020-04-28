@@ -45,6 +45,9 @@ export class SignalrService {
     this.signalrCore.on('MessageReceived', (msg) => {
       this.messageReceived.emit(msg);
     });
+    this.signalrCore.on('disconnected', (msg) => {
+      this.connectionStatus.emit(false);
+    });
   }
   startConnection() {
     this.signalrCore.start('http://10.0.2.2:56255/messageHub', this.header).then(
