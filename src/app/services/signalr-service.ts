@@ -50,7 +50,7 @@ export class SignalrService {
     });
   }
   startConnection() {
-    this.signalrCore.start('http://10.0.2.2:56255/messageHub', this.header).then(
+    this.signalrCore.start('https://edusync.azurewebsites.net/messageHub', this.header).then(
       (isConnected: boolean) => {
         this.connectionStatus.emit(isConnected);
       });

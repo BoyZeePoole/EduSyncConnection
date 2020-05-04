@@ -57,7 +57,6 @@ export class LoginComponent {
         this.token = (<any>res).token;
         setString("username", this.user.username);
         setString("token", this.token);
-
         this.routerExtensions.navigate(["/landingpage"], { clearHistory: true });
       },
         error => {
