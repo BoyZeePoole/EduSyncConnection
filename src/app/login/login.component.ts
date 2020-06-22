@@ -61,6 +61,7 @@ export class LoginComponent {
       },
         error => {
           this.alert("Username or password is incorrect!!");
+          this.processing = false;
         }
       );
   }

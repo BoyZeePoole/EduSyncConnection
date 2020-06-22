@@ -1,3 +1,6 @@
+.fa {
+  font-family: FontAwesome;
+}
 .page {
   align-items: center;
   flex-direction: column;
@@ -20,7 +23,7 @@
   font-weight: 600;
   margin-bottom: 70;
   text-align: center;
-  color: #d51a1a;
+  color: #269696;
 }
 
 .input-field {

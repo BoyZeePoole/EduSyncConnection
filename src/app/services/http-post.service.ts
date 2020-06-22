@@ -3,8 +3,8 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Injectable()
 export class MyHttpPostService {
-  //private serverUrl = "http://10.0.2.2:56255/users/authenticate";
-  private serverUrl = "https://edusync.azurewebsites.net/users/authenticate";
+  private serverUrl = "http://10.0.2.2:56255/users/authenticate";   // Pointing to localhost
+  //private serverUrl = "https://edusync.azurewebsites.net/users/authenticate";
 
   constructor(private http: HttpClient) { }
 

@@ -10,7 +10,7 @@ import { IMessage, DeviceType } from "../models/message";
   providedIn: "root"
 })
 export class SignalrService {
-
+  private serverUrl = "http://10.0.2.2:56255/messageHub";   // Pointing to localhost
   messageReceived = new EventEmitter<IMessage>();
   connectionStatus = new EventEmitter<boolean>();
   header: SignalRCoreRHeaders;
@@ -50,7 +50,7 @@ export class SignalrService {
     });
   }
   startConnection() {
-    this.signalrCore.start('https://edusync.azurewebsites.net/messageHub', this.header).then(
+    this.signalrCore.start(this.serverUrl, this.header).then(
       (isConnected: boolean) => {
         this.connectionStatus.emit(isConnected);
       });

@@ -1,21 +1,21 @@
 <ActionBar title="EduSync"></ActionBar>
 <FlexboxLayout class="page">
   <StackLayout class="form">
-      <Image class="logo" src="~/app/images/logo.png"></Image>
-      <Label class="header" text="Edu Sync"></Label>
-      <PreviousNextView>
-          <GridLayout rows="auto, auto, auto">
-              <StackLayout row="0">
-                <Label class="login-label" text="Connection:{{connectionStatus}}"></Label>
-                <Label *ngIf="connectionStatus==false" class="login-label" text="connecting..."></Label>
-                <StackLayout class="hr-light"></StackLayout>
-              </StackLayout>
-              <!-- <StackLayout row="1" class="input-field">
+    <Image class="logo" src="~/app/images/logo2.png"></Image>
+    <Label class="header" text="Edu Sync"></Label>
+    <PreviousNextView>
+      <GridLayout rows="auto, auto, auto">
+        <StackLayout row="0">
+          <Label class="login-label" text="Connection:{{connectionStatus}}"></Label>
+          <Label *ngIf="connectionStatus==false" class="login-label" text="connecting..."></Label>
+          <StackLayout class="hr-light"></StackLayout>
+        </StackLayout>
+        <!-- <StackLayout row="1" class="input-field">
                 <Label class="header" text="Will put something here..."></Label>                 
                   <StackLayout class="hr-light"></StackLayout>
               </StackLayout> -->
-              <ActivityIndicator rowSpan="3" [busy]="processing"></ActivityIndicator>
-          </GridLayout>
-      </PreviousNextView>
+        <ActivityIndicator rowSpan="3" [busy]="processing"></ActivityIndicator>
+      </GridLayout>
+    </PreviousNextView>
   </StackLayout>
 </FlexboxLayout>
