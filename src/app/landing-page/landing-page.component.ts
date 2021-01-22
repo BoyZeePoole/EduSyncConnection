@@ -63,7 +63,7 @@ export class LandingPageComponent implements OnInit {
   }
   confirm() {
     let options = {
-      title: "Loggin into EduSync",
+      title: "Logging into EduSync",
       message: "Are you trying to login to EduSync?",
       okButtonText: "Yes",
       cancelButtonText: "No",
